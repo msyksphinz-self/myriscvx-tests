@@ -11,7 +11,10 @@ void func (struct S elem) {
   }
 }
 
-// void call_func () {
-//   struct_type elem = {10, 20};
-//   func (elem);
-// }
+void call_func () {
+  struct S elem;
+  for (int i = 0; i < 17; i++) {
+    elem.x[i] = i;
+  }
+  func (elem);
+}
