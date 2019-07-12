@@ -1,0 +1,45 @@
+[
+    {
+        "mips": {
+            "clang_opt": ["-O0", "-O1"],
+            "arch_opt" : ["-march=mips"],
+            "reloc_opt": ["-relocation-model=static", "-relocation-model=pic"]
+        },
+        "myriscxv32": {
+            "clang_opt":    ["-O0", "-O1"],
+            "llc_opt":      ["-mcpu=simple32"],
+            "arch_opt":     ["-march=myriscvx32"],
+            "abi_opt":      ["-target-abi=lp64", "-target-abi=stack32"],
+            "tailcall_opt": ["-enable-MYRISCVX-tail-calls=true", "-enable-MYRISCVX-tail-calls=false"],
+            "reloc_opt":    ["-relocation-model=static", "-relocation-model=pic"]
+        },
+        "riscv32": {
+            "clang_opt": ["-O0", "-O1"],
+            "arch_opt":  ["-march=riscv32"],
+            "reloc_opt": ["-relocation-model=static", "-relocation-model=pic"]
+        }
+    },
+
+    {
+        "func_struct_simple": {
+            "clang_additional_opt": "",
+            "name": "func_struct_simple",
+            "source": "tests/func_struct_simple.cpp"
+        },
+        "tailcall": {
+            "clang_additional_opt": "",
+            "name": "tailcall",
+            "source": "tests/tailcall.cpp"
+        },
+        "test_byval": {
+            "clang_additional_opt": "",
+            "name": "test_byval",
+            "source": "tests/test_byval.cpp"
+        },
+        "vararg": {
+            "clang_additional_opt": "--target=mips-unknown-elf",
+            "name": "vararg",
+            "source": "tests/vararg.cpp"
+        }
+    }
+]
