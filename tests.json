@@ -21,6 +21,11 @@
     },
 
     {
+        "if_ctrl": {
+            "clang_additional_opt": "",
+            "name": "if_ctrl",
+            "source": "tests/if_ctrl.cpp"
+        },
         "func_struct_simple": {
             "clang_additional_opt": "",
             "name": "func_struct_simple",
