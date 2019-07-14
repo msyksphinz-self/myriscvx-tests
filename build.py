@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import json
 import itertools
 import sys
@@ -31,18 +33,21 @@ def compile_arch(arch):
                              test[1]["clang_additional_opt"],
                              "-o", bitfile])
             subprocess.call(["./bin/llvm-dis", bitfile, "-o", llfile])
-            llc_command = ["./bin/llc", "-stats", "-debug", "-filetype=asm", bitfile] + list(config[1:])
 
-            llc_log = ""
-            try:
-                llc_log = subprocess.check_output(llc_command, stderr=subprocess.STDOUT)
-            except subprocess.CalledProcessError as e:
-                print("Failed to build {} {}".format(test[1], config))
-                llc_log = e.output
+            for filetype in ["asm", "obj"] :
+                llc_command = ["./bin/llc", "-stats", "-debug", "-filetype=" + filetype, bitfile] + list(config[1:])
 
-            with open(logfile, 'w') as log_fp:
-                log_fp.write(str(llc_log))
-            log_fp.close()
+                llc_log = ""
+                try:
+                    llc_log = subprocess.check_output(llc_command, stderr=subprocess.STDOUT)
+                except subprocess.CalledProcessError as e:
+                    print("Failed to build {} {}".format(test[1], config))
+                    llc_log = e.output
+
+                with open(logfile, 'w') as log_fp:
+                    log_fp.write(str(llc_log))
+                log_fp.close()
+
 
 if __name__ == '__main__':
     config_file = sys.argv[1]
