@@ -26,7 +26,8 @@ def compile_arch(arch):
 
             bitfile = dirname + "/" + test[0] + ".bc"
             llfile  = dirname + "/" + test[0] + ".ll"
-            logfile = dirname + "/" + test[0] + ".log"
+            objfile = dirname + "/" + test[0] + ".o"
+            dmpfile = dirname + "/" + test[0] + ".dmp"
             subprocess.call(["./bin/clang", "-c", config[0],
                              "../myriscvx-tests/" + input_source,
                              "-emit-llvm",
@@ -44,9 +45,17 @@ def compile_arch(arch):
                     print("Failed to build {} {}".format(test[1], config))
                     llc_log = e.output
 
+                logfile = dirname + "/" + test[0] + "." + filetype + ".log"
                 with open(logfile, 'w') as log_fp:
                     log_fp.write(str(llc_log))
                 log_fp.close()
+
+            # objdump
+            objdump_command = ["./bin/llvm-objdump", "-debug", "-d", objfile]
+            obj_log = subprocess.call(objdump_command, stderr=subprocess.STDOUT)
+            with open(logfile, 'w') as log_fp:
+                log_fp.write(str(obj_log))
+            log_fp.close()
 
 
 if __name__ == '__main__':
