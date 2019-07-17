@@ -20,7 +20,6 @@ def compile_arch(arch):
         for config in itertools.product(*cfg_list):
 
             dirname = 'results/' + test[0] + "_".join(config).replace(' ', '_')
-            print("    Building {} in {} ...".format(test[0], dirname))
             if not os.path.exists(dirname):
                 os.mkdir(dirname)
 
@@ -28,34 +27,37 @@ def compile_arch(arch):
             llfile  = dirname + "/" + test[0] + ".ll"
             objfile = dirname + "/" + test[0] + ".o"
             dmpfile = dirname + "/" + test[0] + ".dmp"
-            subprocess.call(["./bin/clang", "-c", config[0],
+            subprocess.run(["./bin/clang", "-c", config[0],
                              "../myriscvx-tests/" + input_source,
                              "-emit-llvm",
                              test[1]["clang_additional_opt"],
                              "-o", bitfile])
-            subprocess.call(["./bin/llvm-dis", bitfile, "-o", llfile])
+            subprocess.run(["./bin/llvm-dis", bitfile, "-o", llfile])
+
+            result = []
 
             for filetype in ["asm", "obj"] :
                 llc_command = ["./bin/llc", "-stats", "-debug", "-filetype=" + filetype, bitfile] + list(config[1:])
 
-                llc_log = ""
-                try:
-                    llc_log = subprocess.check_output(llc_command, stderr=subprocess.STDOUT)
-                except subprocess.CalledProcessError as e:
-                    print("Failed to build {} {}".format(test[1], config))
-                    llc_log = e.output
+                # print("  Executing Command : {}".format(' '.join(llc_command)))
 
+                ret = subprocess.run(llc_command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
                 logfile = dirname + "/" + test[0] + "." + filetype + ".log"
                 with open(logfile, 'w') as log_fp:
-                    log_fp.write(str(llc_log))
+                    log_fp.write('{}'.format(ret.stdout.decode('utf-8')))
                 log_fp.close()
+                result.append(ret.returncode)
 
             # objdump
             objdump_command = ["./bin/llvm-objdump", "-debug", "-d", objfile]
-            obj_log = subprocess.call(objdump_command, stderr=subprocess.STDOUT)
+            ret = subprocess.run(objdump_command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+            logfile = dirname + "/" + test[0] + ".objdump.log"
             with open(logfile, 'w') as log_fp:
-                log_fp.write(str(obj_log))
+                log_fp.write('{}'.format(ret.stdout.decode('utf-8')))
             log_fp.close()
+            result.append(ret.returncode)
+
+            print("    [{2},{3},{4}] Building {0} in {1} ...".format(test[0], dirname, result[0], result[1], result[2]))
 
 
 if __name__ == '__main__':
