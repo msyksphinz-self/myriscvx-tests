@@ -12,5 +12,5 @@ int tailcall (int a, int b)
 
 int test_tailcall(int a, int b)
 {
-  return factorial(b, a);
+  return tailcall(b, a);
 }

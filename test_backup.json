@@ -1,5 +1,0 @@
-        "func_call_struct": {
-            "clang_additional_opt": "",
-            "name": "func_call_struct",
-            "source": "tests/func_call_struct.cpp"
-        },
