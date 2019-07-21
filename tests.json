@@ -22,97 +22,97 @@
 
     {
         "ch3": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "ch3",
             "source": "tests/ch3.cpp"
         },
         "ch3_2.cpp": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "ch3_2",
             "source": "tests/ch3_2.cpp"
         },
         "ch3_largeframe": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "ch3_largeframe",
             "source": "tests/ch3_largeframe.cpp"
         },
         "ch4_1_div": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "ch4_1_div",
             "source": "tests/ch4_1_div.cpp"
         },
         "ch4_1_math": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "ch4_1_math",
             "source": "tests/ch4_1_math.cpp"
         },
         "ch4_1_mod": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "ch4_1_mod",
             "source": "tests/ch4_1_mod.cpp"
         },
         "ch4_1_mult": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "ch4_1_mult",
             "source": "tests/ch4_1_mult.cpp"
         },
         "ch4_1_mult2": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "ch4_1_mult2",
             "source": "tests/ch4_1_mult2.cpp"
         },
         "ch4_1_rotate": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "ch4_1_rotate",
             "source": "tests/ch4_1_rotate.cpp"
         },
         "ch4_2_logic": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "ch4_2_logic",
             "source": "tests/ch4_2_logic.cpp"
         },
         "ch4_2_slt_explain": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "ch4_2_slt_explain",
             "source": "tests/ch4_2_slt_explain.cpp"
         },
         "ch6_1": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "ch6_1",
             "source": "tests/ch6_1.cpp"
         },
         "ch7_1_bool": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "ch7_1_bool",
             "source": "tests/ch7_1_bool.cpp"
         },
         "ch7_1_char_in_struct": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "ch7_1_char_in_struct",
             "source": "tests/ch7_1_char_in_struct.cpp"
         },
         "ch7_1_char_short": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "ch7_1_char_short",
             "source": "tests/ch7_1_char_short.cpp"
         },
         "ch7_1_globalstructoffset": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "ch7_1_globalstructoffset",
             "source": "tests/ch7_1_globalstructoffset.cpp"
@@ -124,13 +124,13 @@
             "source": "tests/ch7_1_localarrayinit.cpp"
         },
         "ch7_1_localpointer": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "ch7_1_localpointer",
             "source": "tests/ch7_1_localpointer.cpp"
         },
         "ch7_1_longlong": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "ch7_1_longlong",
             "source": "tests/ch7_1_longlong.cpp"
@@ -142,79 +142,79 @@
             "source": "tests/ch7_1_vector.cpp"
         },
         "ch8_1_1": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "ch8_1_1",
             "source": "tests/ch8_1_1.cpp"
         },
         "ch8_1_blockaddr": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "ch8_1_blockaddr",
             "source": "tests/ch8_1_blockaddr.cpp"
         },
         "ch8_1_br_jt": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "ch8_1_br_jt",
             "source": "tests/ch8_1_br_jt.cpp"
         },
         "ch8_1_br_jt_simple": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "ch8_1_br_jt_simple",
             "source": "tests/ch8_1_br_jt_simple.cpp"
         },
         "ch8_1_ctrl": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "ch8_1_ctrl",
             "source": "tests/ch8_1_ctrl.cpp"
         },
         "ch8_2_deluselessjmp": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "ch8_2_deluselessjmp",
             "source": "tests/ch8_2_deluselessjmp.cpp"
         },
         "ch8_2_longbranch": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "ch8_2_longbranch",
             "source": "tests/ch8_2_longbranch.cpp"
         },
         "ch8_2_phinode": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "ch8_2_phinode",
             "source": "tests/ch8_2_phinode.cpp"
         },
         "ch8_2_select": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "ch8_2_select",
             "source": "tests/ch8_2_select.cpp"
         },
         "ch8_2_select2": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "ch8_2_select2",
             "source": "tests/ch8_2_select2.cpp"
         },
         "ch8_2_select_global_pic": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "ch8_2_select_global_pic",
             "source": "tests/ch8_2_select_global_pic.cpp"
         },
         "ch9_1": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "ch9_1",
             "source": "tests/ch9_1.cpp"
         },
         "ch9_1_2": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "ch9_1_2",
             "source": "tests/ch9_1_2.cpp"
@@ -226,13 +226,13 @@
             "source": "tests/ch9_1_constructor.cpp"
         },
         "ch9_1_extend": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "ch9_1_extend",
             "source": "tests/ch9_1_extend.cpp"
         },
         "ch9_1_simple": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "ch9_1_simple",
             "source": "tests/ch9_1_simple.cpp"
@@ -244,25 +244,25 @@
             "source": "tests/ch9_1_struct.cpp"
         },
         "ch9_2_tailcall": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "ch9_2_tailcall",
             "source": "tests/ch9_2_tailcall.cpp"
         },
         "ch9_2_tailcall2": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "ch9_2_tailcall2",
             "source": "tests/ch9_2_tailcall2.cpp"
         },
         "ch9_3_alloc": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "ch9_3_alloc",
             "source": "tests/ch9_3_alloc.cpp"
         },
         "ch9_3_bswap": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "ch9_3_bswap",
             "source": "tests/ch9_3_bswap.cpp"
@@ -280,43 +280,43 @@
             "source": "tests/ch9_3_frame_return_addr.cpp"
         },
         "ch9_3_stacksave": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "ch9_3_stacksave",
             "source": "tests/ch9_3_stacksave.cpp"
         },
         "ch9_3_template": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "ch9_3_template",
             "source": "tests/ch9_3_template.cpp"
         },
         "ch9_3_vararg": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "ch9_3_vararg",
             "source": "tests/ch9_3_vararg.cpp"
         },
         "ch9_caller_callee_save_registers": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "ch9_caller_callee_save_registers",
             "source": "tests/ch9_caller_callee_save_registers.cpp"
         },
         "ch9_gprestore": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "ch9_gprestore",
             "source": "tests/ch9_gprestore.cpp"
         },
         "ch9_incoming": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "ch9_incoming",
             "source": "tests/ch9_incoming.cpp"
         },
         "ch9_outgoing": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "ch9_outgoing",
             "source": "tests/ch9_outgoing.cpp"
@@ -328,28 +328,40 @@
             "source": "tests/func_call_struct.cpp"
         },
         "tailcall": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "tailcall",
             "source": "tests/tailcall.cpp"
         },
         "test_byval": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "test_byval",
             "source": "tests/test_byval.cpp"
         },
         "vararg": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "--target=mips-unknown-elf",
             "name": "vararg",
             "source": "tests/vararg.cpp"
         },
         "if_ctrl": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "if_ctrl",
             "source": "tests/if_ctrl.cpp"
+        },
+        "cpp_exception_handling": {
+            "enable": 1,
+            "clang_additional_opt": "",
+            "name": "cpp_exception_handling",
+            "source": "tests/cpp_exception_handling.cpp"
+        },
+        "cpp_inherint": {
+            "enable": 1,
+            "clang_additional_opt": "",
+            "name": "cpp_inherit",
+            "source": "tests/cpp_inherit.cpp"
         }
     }
 ]
