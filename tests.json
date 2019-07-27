@@ -352,16 +352,22 @@
             "source": "tests/if_ctrl.cpp"
         },
         "cpp_exception_handling": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "cpp_exception_handling",
             "source": "tests/cpp_exception_handling.cpp"
         },
         "cpp_inherint": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "cpp_inherit",
             "source": "tests/cpp_inherit.cpp"
+        },
+        "cpp_atomic": {
+            "enable": 1,
+            "clang_additional_opt": "",
+            "name": "cpp_atomic",
+            "source": "tests/cpp_atomic.cpp"
         }
     }
 ]
