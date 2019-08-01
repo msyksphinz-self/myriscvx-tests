@@ -1,17 +1,22 @@
 [
     {
-        "mips": {
+        "x86": {
             "clang_opt": ["-O0", "-O1"],
+            "arch_opt" : ["-march=x86"],
+            "reloc_opt": ["-relocation-model=static", "-relocation-model=pic"]
+        },
+        "mips": {
+            "clang_opt": ["-O0", "-O1", "-O3"],
             "arch_opt" : ["-march=mips"],
             "reloc_opt": ["-relocation-model=static", "-relocation-model=pic"]
         },
         "riscv32": {
-            "clang_opt": ["-O0", "-O1"],
+            "clang_opt": ["-O0", "-O1", "-O3"],
             "arch_opt":  ["-march=riscv32"],
             "reloc_opt": ["-relocation-model=static", "-relocation-model=pic"]
         },
         "myriscxv32": {
-            "clang_opt":    ["-O0", "-O1"],
+            "clang_opt":    ["-O0", "-O1", "-O3"],
             "llc_opt":      ["-mcpu=simple32"],
             "arch_opt":     ["-march=myriscvx32"],
             "abi_opt":      ["-target-abi=lp64", "-target-abi=stack32"],
@@ -364,10 +369,16 @@
             "source": "tests/cpp_inherit.cpp"
         },
         "cpp_atomic": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "cpp_atomic",
             "source": "tests/cpp_atomic.cpp"
+        },
+        "fp_mem": {
+            "enable": 1,
+            "clang_additional_opt": "",
+            "name": "fp_mem",
+            "source": "tests/fp_mem.cpp"
         }
     }
 ]
