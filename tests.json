@@ -379,6 +379,12 @@
             "clang_additional_opt": "",
             "name": "fp_mem",
             "source": "tests/fp_mem.cpp"
+        },
+        "fp_ops": {
+            "enable": 1,
+            "clang_additional_opt": "",
+            "name": "fp_ops",
+            "source": "tests/fp_ops.cpp"
         }
     }
 ]
