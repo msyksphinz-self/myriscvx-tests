@@ -382,9 +382,15 @@
         },
         "fp_ops": {
             "enable": 1,
-            "clang_additional_opt": "",
+            "clang_additional_opt": "-mfma",
             "name": "fp_ops",
             "source": "tests/fp_ops.cpp"
+        },
+        "fp_args": {
+            "enable": 1,
+            "clang_additional_opt": "",
+            "name": "fp_args",
+            "source": "tests/fp_args.cpp"
         }
     }
 ]

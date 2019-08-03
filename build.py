@@ -39,7 +39,7 @@ def compile_arch(arch, result_fp, lock):
             llfile  = dirname + "/" + test[0] + ".ll"
             objfile = dirname + "/" + test[0] + ".o"
             dmpfile = dirname + "/" + test[0] + ".dmp"
-            subprocess.run(["./bin/clang", "-c", config[0],
+            subprocess.run(["./bin/clang", "-march=native", "-c", config[0],
                              "../myriscvx-tests/" + input_source,
                              "-emit-llvm",
                              test[1]["clang_additional_opt"],
