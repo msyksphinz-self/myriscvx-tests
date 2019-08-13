@@ -12,7 +12,7 @@
         },
         "riscv32": {
             "clang_opt": ["-O0", "-O1", "-O3"],
-            "arch_opt":  ["-march=riscv32"],
+            "arch_opt":  ["-march=riscv32", "-march=riscv64"],
             "reloc_opt": ["-relocation-model=static", "-relocation-model=pic"]
         },
         "myriscxv32": {
@@ -25,11 +25,12 @@
         },
         "myriscxv64": {
             "clang_opt":    ["-O0", "-O1", "-O3"],
-            "llc_opt":      ["-mcpu=rocket64", "-mattr=+64bit"],
+            "llc_opt":      ["-mcpu=rocket64"],
             "arch_opt":     ["-march=myriscvx64"],
             "abi_opt":      ["-target-abi=lp64", "-target-abi=stack32"],
             "tailcall_opt": ["-enable-MYRISCVX-tail-calls=true", "-enable-MYRISCVX-tail-calls=false"],
-            "reloc_opt":    ["-relocation-model=static", "-relocation-model=pic"]
+            "reloc_opt":    ["-relocation-model=static", "-relocation-model=pic"],
+            "attr_opt":     ["-mattr=+64bit", "-mattr=-64bit"]
         }
     },
 
@@ -221,7 +222,7 @@
             "source": "tests/ch8_2_select_global_pic.cpp"
         },
         "ch9_1": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "ch9_1",
             "source": "tests/ch9_1.cpp"
@@ -407,7 +408,7 @@
             "source": "tests/fp_cmp.cpp"
         },
         "fp_others": {
-            "enable": 1,
+            "enable": 0,
             "clang_additional_opt": "",
             "name": "fp_others",
             "source": "tests/fp_others.cpp"
