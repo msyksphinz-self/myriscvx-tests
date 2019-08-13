@@ -1,11 +1,11 @@
 #include <math.h>
 #include <stdint.h>
 
-float f_sqrt (float in) { return sqrtf(in); }
+// float f_sqrt (float in) { return sqrtf(in); }
 float f_abs  (float in) { return fabsf(in); }
 float f_neg  (float in) { return -in; }
 
-double d_sqrt (double in) { return sqrt(in); }
+// double d_sqrt (double in) { return sqrt(in); }
 double d_abs  (double in) { return fabs(in); }
 double d_neg  (double in) { return -in; }
 

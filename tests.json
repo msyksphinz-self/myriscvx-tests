@@ -22,6 +22,14 @@
             "abi_opt":      ["-target-abi=lp64", "-target-abi=stack32"],
             "tailcall_opt": ["-enable-MYRISCVX-tail-calls=true", "-enable-MYRISCVX-tail-calls=false"],
             "reloc_opt":    ["-relocation-model=static", "-relocation-model=pic"]
+        },
+        "myriscxv64": {
+            "clang_opt":    ["-O0", "-O1", "-O3"],
+            "llc_opt":      ["-mcpu=rocket64", "-mattr=+64bit"],
+            "arch_opt":     ["-march=myriscvx64"],
+            "abi_opt":      ["-target-abi=lp64", "-target-abi=stack32"],
+            "tailcall_opt": ["-enable-MYRISCVX-tail-calls=true", "-enable-MYRISCVX-tail-calls=false"],
+            "reloc_opt":    ["-relocation-model=static", "-relocation-model=pic"]
         }
     },
 
@@ -213,7 +221,7 @@
             "source": "tests/ch8_2_select_global_pic.cpp"
         },
         "ch9_1": {
-            "enable": 0,
+            "enable": 1,
             "clang_additional_opt": "",
             "name": "ch9_1",
             "source": "tests/ch9_1.cpp"
@@ -403,6 +411,12 @@
             "clang_additional_opt": "",
             "name": "fp_others",
             "source": "tests/fp_others.cpp"
+        },
+        "xlen64_func": {
+            "enable": 1,
+            "clang_additional_opt": "",
+            "name": "xlen64_func",
+            "source": "tests/xlen64_func.cpp"
         }
     }
 ]
