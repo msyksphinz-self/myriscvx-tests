@@ -26,7 +26,5 @@ int test_math()
   i = (0x80 >> a); // i = 0x04
   i1 = (b >> a);  // i1 = 0x0
 
-  return (c+d+e+f+int(f1)+g+(int)g1+h+(int)h1+i+(int)i1);
-// 7+3+10+20-10+1+3+32+4+4+0 = 74
+  return 0;
 }
-

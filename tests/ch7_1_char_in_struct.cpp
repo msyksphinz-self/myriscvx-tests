@@ -13,8 +13,6 @@ struct Date
   char second;
 };
 
-unsigned char b[4] = {'a', 'b', 'c', '\0'};
-
 int test_char()
 {
   unsigned char a = b[1];
@@ -25,4 +23,3 @@ int test_char()
 
   return 0;
 }
-
